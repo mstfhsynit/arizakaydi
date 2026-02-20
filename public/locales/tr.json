@@ -1,0 +1,208 @@
+{
+  "app": {
+    "brandKicker": "Okul Yönetimi",
+    "brandTitle": "Arıza ve Tadilat",
+    "topbarTitle": "Operasyon Paneli",
+    "clockPrefix": "Saat",
+    "themeToggleTitle": "Tema Değiştir"
+  },
+  "role": {
+    "user": "Öğretmen",
+    "admin": "Yönetici",
+    "manager": "Müdür",
+    "super_admin": "Süper Yönetici"
+  },
+  "nav": {
+    "dashboard": "Gösterge Paneli",
+    "createRequest": "Kayıt Oluştur",
+    "myRequests": "Kayıtlarım",
+    "allRequests": "Tüm Kayıtlar",
+    "users": "Kullanıcılar",
+    "changePassword": "Şifre Değiştir",
+    "logout": "Çıkış Yap"
+  },
+  "theme": {
+    "dark": "Karanlık Temaya Geç",
+    "light": "Aydınlık Temaya Geç"
+  },
+  "login": {
+    "pageTitle": "Giriş Yap",
+    "heroTitle": "Kahramanmaraş Mesleki ve Teknik Anadolu Lisesi",
+    "heroDescription": "Eğitimde düzen, teknolojide güç.\nArıza ve bakım süreçlerini güvenli, hızlı ve sistematik şekilde yönetin.",
+    "title": "Giriş Yap",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre",
+    "button": "Giriş Yap",
+    "buttonLoading": "Giriş yapılıyor...",
+    "success": "Giriş başarılı. Yönlendiriliyorsunuz..."
+  },
+  "dashboard": {
+    "pageTitle": "Gösterge Paneli",
+    "title": "Sistem Gösterge Paneli",
+    "welcome": "{{name}} olarak giriş yaptınız.",
+    "abilitiesTitle": "Yetkiler",
+    "total": "Toplam Kayıt",
+    "waiting": "Bekleniyor",
+    "processing": "İşlemde",
+    "resolved": "Çözüldü",
+    "urgent": "Acil",
+    "last7DaysTrend": "Son 7 Gün Kayıt Trendi",
+    "statusDistribution": "Durum Dağılımı",
+    "averageResolution": "Ortalama Çözüm Süresi",
+    "onlineUsers": "Çevrim İçi Kullanıcılar",
+    "onlineUsersWaiting": "Canlı bağlantı bekleniyor...",
+    "noOnlineUsers": "Çevrim içi kullanıcı yok."
+  },
+  "abilities": {
+    "user": [
+      "Arıza ve tadilat kaydı oluşturabilir.",
+      "Kendi kayıtlarını görüntüleyebilir.",
+      "Şifresini değiştirebilir."
+    ],
+    "admin": [
+      "Tüm kayıtları görüntüleyebilir.",
+      "Kayıt durumunu güncelleyebilir.",
+      "Filtreleme yapabilir.",
+      "Kullanıcı oluşturma, güncelleme ve silme işlemlerini yapabilir.",
+      "Tüm kullanıcıları listeleyebilir."
+    ],
+    "manager": [
+      "Arıza ve tadilat kaydı oluşturabilir.",
+      "Tüm kayıtları görüntüleyebilir.",
+      "Filtreleme yapabilir.",
+      "Kayıt durumunu değiştiremez."
+    ]
+  },
+  "request": {
+    "createPageTitle": "Kayıt Oluştur",
+    "createTitle": "Arıza / Tadilat Kaydı Oluştur",
+    "ruleDescription": "Kural: Aciliyet = Acil veya Alt Kategori = Diğer seçiminde açıklama zorunludur.",
+    "fullName": "Ad Soyad",
+    "block": "Blok",
+    "category": "Kategori",
+    "subCategory": "Alt Kategori",
+    "urgency": "Aciliyet",
+    "description": "Açıklama",
+    "save": "Kaydı Kaydet",
+    "saveLoading": "Kaydediliyor...",
+    "myPageTitle": "Kayıtlarım",
+    "myTitle": "Kayıtlarım"
+  },
+  "adminPanel": {
+    "pageTitle": "Tüm Kayıtlar",
+    "title": "Tüm Arıza / Tadilat Kayıtları",
+    "filterButton": "Filtrele",
+    "allOption": "Hepsi",
+    "readonly": "Salt Okunur",
+    "update": "Güncelle",
+    "updateLoading": "Güncelleniyor...",
+    "filterBlock": "Blok",
+    "filterCategory": "Kategori",
+    "filterStatus": "Durum",
+    "filterUrgency": "Aciliyet",
+    "tableId": "ID",
+    "tableCreatedBy": "Açan Kişi (Ad Soyad)",
+    "tableBlock": "Blok",
+    "tableCategory": "Kategori",
+    "tableSubCategory": "Alt Kategori",
+    "tableUrgency": "Aciliyet",
+    "tableStatus": "Durum",
+    "tableDescription": "Açıklama",
+    "tableDate": "Tarih",
+    "tableAction": "İşlem"
+  },
+  "users": {
+    "pageTitle": "Kullanıcı Yönetimi",
+    "title": "Kullanıcı Yönetimi (Yönetici)",
+    "note": "Demo notu: gösterilen şifre yalnızca demo amaçlıdır.",
+    "createTitle": "Yeni Kullanıcı Oluştur",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre",
+    "passwordRepeat": "Şifre Tekrarı",
+    "role": "Rol",
+    "add": "Kullanıcı Ekle",
+    "addLoading": "Kaydediliyor...",
+    "listTitle": "Kullanıcılar",
+    "tableId": "ID",
+    "tableName": "Ad Soyad",
+    "tableUsername": "Kullanıcı Adı",
+    "tableRole": "Rol",
+    "tableDemoPassword": "Demo Şifre",
+    "tableAction": "İşlem",
+    "edit": "Düzenle",
+    "remove": "Sil",
+    "editModalTitle": "Kullanıcı Düzenle",
+    "editModalDesc": "Bilgileri güncelleyip kaydediniz.",
+    "editModalSave": "Güncelle",
+    "deleteModalTitle": "Kullanıcıyı Sil",
+    "deleteModalMessage": "Bu kullanıcıyı silmek istediğinize emin misiniz?",
+    "deleteModalConfirm": "Sil",
+    "deleteModalCancel": "İptal Et",
+    "passwordOptional": "Değiştirmek istemiyorsanız boş bırakınız",
+    "passwordRepeatOptional": "Yeni şifre girildiyse zorunludur"
+  },
+  "status": {
+    "Bekleniyor": "Bekleniyor",
+    "Islemde": "İşlemde",
+    "Cozuldu": "Çözüldü"
+  },
+  "urgency": {
+    "Normal": "Normal",
+    "Acil": "Acil"
+  },
+  "category": {
+    "Ariza": "Arıza",
+    "Tadilat": "Tadilat"
+  },
+  "subcategory": {
+    "Akilli Tahta": "Akıllı Tahta",
+    "Bilgisayar": "Bilgisayar",
+    "Internet": "İnternet",
+    "Yazici": "Yazıcı",
+    "Diger": "Diğer",
+    "Pencere": "Pencere",
+    "Kapi": "Kapı",
+    "Dolap": "Dolap",
+    "Sira": "Sıra",
+    "Masa": "Masa"
+  },
+  "empty": {
+    "defaultTitle": "Henüz kayıt bulunmamaktadır.",
+    "defaultDescription": "Yeni bir kayıt oluşturulduğunda burada listelenecektir.",
+    "myRequestsDescription": "Oluşturduğunuz kayıtlar burada listelenecektir.",
+    "adminRequestsDescription": "Yeni kayıt oluşturulduğunda bu tabloda görüntülenecektir.",
+    "usersTitle": "Kullanıcı bulunamadı.",
+    "usersDescription": "Yeni kullanıcı oluşturarak listeyi doldurabilirsiniz."
+  },
+  "modal": {
+    "confirmTitle": "Onay Gerekiyor",
+    "confirmText": "Onayla",
+    "cancelText": "İptal Et",
+    "formTitle": "Form",
+    "save": "Kaydet",
+    "passwordTitle": "Şifre Değiştir",
+    "passwordDesc": "Mevcut şifreyi doğrulayıp yeni şifrenizi belirleyiniz.",
+    "passwordCurrent": "Mevcut Şifre",
+    "passwordNew": "Yeni Şifre",
+    "passwordRepeat": "Yeni Şifre Tekrarı",
+    "passwordSave": "Şifreyi Kaydet"
+  },
+  "validation": {
+    "usernameRequired": "Kullanıcı adı zorunludur.",
+    "passwordRequired": "Şifre zorunludur.",
+    "passwordRepeatRequired": "Şifre tekrarı zorunludur.",
+    "passwordMismatch": "Şifre ve şifre tekrarı aynı olmalıdır.",
+    "passwordMin": "Yeni şifre en az 4 karakter olmalıdır.",
+    "descriptionRequired": "Acil veya Diğer seçiminde açıklama zorunludur.",
+    "fieldRequired": "{{field}} zorunludur."
+  },
+  "messages": {
+    "passwordChanged": "Şifre güncellendi.",
+    "operationFailed": "İşlem başarısız."
+  },
+  "loading": {
+    "global": "Yükleniyor..."
+  }
+}

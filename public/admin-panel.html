@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="adminPanel.pageTitle">Tüm Kayıtlar</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-app">
+    <div class="app-shell fade-in">
+      <aside id="sidebar" class="sidebar"></aside>
+      <div class="app-main">
+        <header id="topbar" class="topbar"></header>
+        <main class="content-area">
+          <div class="container">
+            <section class="card">
+              <h1 data-i18n="adminPanel.title">Tüm Arıza / Tadilat Kayıtları</h1>
+              <div id="message" class="message"></div>
+
+              <form id="filter-form" class="filter-grid">
+                <label>
+                  <span data-i18n="adminPanel.filterBlock">Blok</span>
+                  <select id="f-blok" name="blok"></select>
+                </label>
+                <label>
+                  <span data-i18n="adminPanel.filterCategory">Kategori</span>
+                  <select id="f-kategori" name="kategori"></select>
+                </label>
+                <label>
+                  <span data-i18n="adminPanel.filterStatus">Durum</span>
+                  <select id="f-durum" name="durum"></select>
+                </label>
+                <label>
+                  <span data-i18n="adminPanel.filterUrgency">Aciliyet</span>
+                  <select id="f-aciliyet" name="aciliyet"></select>
+                </label>
+              </form>
+              <button id="reload-btn" type="button" class="secondary" data-i18n="adminPanel.filterButton">
+                Filtrele
+              </button>
+            </section>
+
+            <section class="card">
+              <div class="bulk-actions">
+                <div class="bulk-actions-buttons">
+                  <button id="delete-resolved-btn" type="button" class="danger resolved-delete-btn">Çözülenleri Sil</button>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th data-i18n="adminPanel.tableId">ID</th>
+                      <th data-i18n="adminPanel.tableCreatedBy">Açan Kişi (Ad Soyad)</th>
+                      <th data-i18n="adminPanel.tableBlock">Blok</th>
+                      <th data-i18n="adminPanel.tableCategory">Kategori</th>
+                      <th data-i18n="adminPanel.tableSubCategory">Alt Kategori</th>
+                      <th data-i18n="adminPanel.tableUrgency">Aciliyet</th>
+                      <th data-i18n="adminPanel.tableStatus">Durum</th>
+                      <th data-i18n="adminPanel.tableDescription">Açıklama</th>
+                      <th data-i18n="adminPanel.tableDate">Tarih</th>
+                      <th data-i18n="adminPanel.tableAction">İşlem</th>
+                    </tr>
+                  </thead>
+                  <tbody id="requests-body"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/admin-panel.js"></script>
+  </body>
+</html>

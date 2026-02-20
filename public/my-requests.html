@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="request.myPageTitle">Kayıtlarım</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-app">
+    <div class="app-shell fade-in">
+      <aside id="sidebar" class="sidebar"></aside>
+      <div class="app-main">
+        <header id="topbar" class="topbar"></header>
+        <main class="content-area">
+          <div class="container">
+            <section class="card">
+              <h1 data-i18n="request.myTitle">Kayıtlarım</h1>
+              <div id="message" class="message"></div>
+              <div class="bulk-actions">
+                <div class="bulk-actions-buttons">
+                  <button id="delete-resolved-btn" type="button" class="danger resolved-delete-btn">Çözülenleri Sil</button>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th data-i18n="adminPanel.tableId">ID</th>
+                      <th data-i18n="adminPanel.tableBlock">Blok</th>
+                      <th data-i18n="adminPanel.tableCategory">Kategori</th>
+                      <th data-i18n="adminPanel.tableSubCategory">Alt Kategori</th>
+                      <th data-i18n="adminPanel.tableUrgency">Aciliyet</th>
+                      <th data-i18n="adminPanel.tableStatus">Durum</th>
+                      <th data-i18n="adminPanel.tableDescription">Açıklama</th>
+                      <th data-i18n="adminPanel.tableDate">Tarih</th>
+                      <th data-i18n="adminPanel.tableAction">İşlem</th>
+                    </tr>
+                  </thead>
+                  <tbody id="requests-body"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/my-requests.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="users.pageTitle">Kullanıcı Yönetimi</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-app">
+    <div class="app-shell fade-in">
+      <aside id="sidebar" class="sidebar"></aside>
+      <div class="app-main">
+        <header id="topbar" class="topbar"></header>
+        <main class="content-area">
+          <div class="container">
+            <section class="card">
+              <h1 data-i18n="users.title">Kullanıcı Yönetimi (Yönetici)</h1>
+              <p class="lead-text" data-i18n="users.note">
+                Demo notu: demo_password kolonu sadece demo görünürlüğü içindir.
+              </p>
+              <div id="message" class="message"></div>
+            </section>
+
+            <section class="card form-card">
+              <h2 data-i18n="users.createTitle">Yeni Kullanıcı Oluştur</h2>
+              <form id="create-user-form">
+                <div class="row">
+                  <div>
+                    <label>
+                      <span data-i18n="users.firstName">Ad</span> <span class="required">*</span>
+                      <input type="text" name="ad" required />
+                    </label>
+                    <small class="field-error" data-error-for="ad"></small>
+                  </div>
+                  <div>
+                    <label>
+                      <span data-i18n="users.lastName">Soyad</span> <span class="required">*</span>
+                      <input type="text" name="soyad" required />
+                    </label>
+                    <small class="field-error" data-error-for="soyad"></small>
+                  </div>
+                </div>
+                <div class="row">
+                  <div>
+                    <label>
+                      <span data-i18n="users.username">Kullanıcı Adı</span> <span class="required">*</span>
+                      <input type="text" name="username" required />
+                    </label>
+                    <small class="field-error" data-error-for="username"></small>
+                  </div>
+                  <div>
+                    <label>
+                      <span data-i18n="users.password">Şifre</span> <span class="required">*</span>
+                      <input type="password" name="password" required />
+                    </label>
+                    <small class="field-error" data-error-for="password"></small>
+                  </div>
+                </div>
+                <div class="row">
+                  <div>
+                    <label>
+                      <span data-i18n="users.passwordRepeat">Şifre Tekrarı</span>
+                      <span class="required">*</span>
+                      <input type="password" name="password_repeat" required />
+                    </label>
+                    <small class="field-error" data-error-for="password_repeat"></small>
+                  </div>
+                  <div>
+                    <label>
+                      <span data-i18n="users.role">Rol</span> <span class="required">*</span>
+                      <select name="role">
+                        <option value="user" data-i18n="role.user">Öğretmen</option>
+                        <option value="admin" data-i18n="role.admin">Yönetici</option>
+                        <option value="manager" data-i18n="role.manager">Müdür</option>
+                      </select>
+                    </label>
+                    <small class="field-error" data-error-for="role"></small>
+                  </div>
+                </div>
+                <button type="submit" id="create-user-btn" data-i18n="users.add">Kullanıcı Ekle</button>
+              </form>
+            </section>
+
+            <section class="card">
+              <h2 data-i18n="users.listTitle">Kullanıcılar</h2>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th data-i18n="users.tableId">ID</th>
+                      <th data-i18n="users.tableName">Ad Soyad</th>
+                      <th data-i18n="users.tableUsername">Kullanıcı Adı</th>
+                      <th data-i18n="users.tableRole">Rol</th>
+                      <th data-i18n="users.tableDemoPassword">Demo Şifre</th>
+                      <th data-i18n="users.tableAction">İşlem</th>
+                    </tr>
+                  </thead>
+                  <tbody id="users-body"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/users.js"></script>
+  </body>
+</html>

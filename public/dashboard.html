@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="dashboard.pageTitle">Gösterge Paneli</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-app page-dashboard">
+    <div class="app-shell fade-in">
+      <aside id="sidebar" class="sidebar"></aside>
+      <div class="app-main">
+        <header id="topbar" class="topbar"></header>
+        <main class="content-area">
+          <div class="container">
+            <section class="card">
+              <h1 data-i18n="dashboard.title">Sistem Gösterge Paneli</h1>
+              <p id="welcome" class="lead-text"></p>
+            </section>
+
+            <section class="stats-grid stats-grid-4">
+              <article class="card stat-card">
+                <div class="stat-card-head">
+                  <p class="stat-label" data-i18n="dashboard.total">Toplam Kayıt</p>
+                  <i data-lucide="folder-kanban" class="stat-icon"></i>
+                </div>
+                <p class="stat-value" id="stat-total" hidden>0</p>
+                <div id="skeleton-stat-total" class="skeleton skeleton-stat"></div>
+              </article>
+              <article class="card stat-card">
+                <div class="stat-card-head">
+                  <p class="stat-label" data-i18n="dashboard.waiting">Bekleniyor</p>
+                  <i data-lucide="hourglass" class="stat-icon"></i>
+                </div>
+                <p class="stat-value" id="stat-bekleniyor" hidden>0</p>
+                <div id="skeleton-stat-pending" class="skeleton skeleton-stat"></div>
+              </article>
+              <article class="card stat-card">
+                <div class="stat-card-head">
+                  <p class="stat-label" data-i18n="dashboard.processing">İşlemde</p>
+                  <i data-lucide="wrench" class="stat-icon"></i>
+                </div>
+                <p class="stat-value" id="stat-islemde" hidden>0</p>
+                <div id="skeleton-stat-in-progress" class="skeleton skeleton-stat"></div>
+              </article>
+              <article class="card stat-card">
+                <div class="stat-card-head">
+                  <p class="stat-label" data-i18n="dashboard.resolved">Çözüldü</p>
+                  <i data-lucide="check-check" class="stat-icon"></i>
+                </div>
+                <p class="stat-value" id="stat-cozuldu" hidden>0</p>
+                <div id="skeleton-stat-resolved" class="skeleton skeleton-stat"></div>
+              </article>
+            </section>
+
+            <section id="dashboard-analytics-grid" class="dashboard-grid">
+              <article id="panel-line-trend" class="card dashboard-panel">
+                <h2 data-i18n="dashboard.last7DaysTrend">Son 7 Gün Kayıt Trendi</h2>
+                <div id="line-chart-skeleton" class="skeleton skeleton-chart"></div>
+                <svg id="line-chart" class="line-chart" viewBox="0 0 700 260" preserveAspectRatio="none" hidden></svg>
+                <div id="line-chart-labels" class="chart-labels"></div>
+              </article>
+
+              <article id="panel-status-distribution" class="card dashboard-panel">
+                <h2 data-i18n="dashboard.statusDistribution">Durum Dağılımı</h2>
+                <div id="status-chart-skeleton" class="skeleton skeleton-chart"></div>
+                <div id="status-chart" class="status-chart" hidden></div>
+              </article>
+            </section>
+
+            <section id="online-users-panel" class="dashboard-grid" hidden>
+              <article class="card dashboard-panel">
+                <h2 data-i18n="dashboard.onlineUsers">Çevrim İçi Kullanıcılar</h2>
+                <p
+                  id="online-users-meta"
+                  class="small"
+                  data-i18n="dashboard.onlineUsersWaiting"
+                >
+                  Canlı bağlantı bekleniyor...
+                </p>
+                <div id="online-users-list" class="online-users-list">
+                  <p class="small" data-i18n="dashboard.noOnlineUsers">Çevrim içi kullanıcı yok.</p>
+                </div>
+              </article>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>
+
+

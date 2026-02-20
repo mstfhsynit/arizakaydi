@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arıza Detayı</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-app">
+    <div class="app-shell fade-in">
+      <aside id="sidebar" class="sidebar"></aside>
+      <div class="app-main">
+        <header id="topbar" class="topbar"></header>
+        <main class="content-area">
+          <div class="container">
+            <section class="card">
+              <h1>Arıza Detayı</h1>
+              <div id="message" class="message"></div>
+              <div class="table-actions">
+                <a href="javascript:history.back()" class="btn btn-secondary">Geri</a>
+                <button id="download-attachment-btn" type="button" class="secondary" hidden>
+                  Dosyayı İndir
+                </button>
+              </div>
+              <div class="detail-tabs">
+                <button type="button" class="secondary detail-tab active" data-tab-target="details">
+                  Detay
+                </button>
+                <button type="button" class="secondary detail-tab" data-tab-target="comments">
+                  Yorumlar
+                </button>
+                <button type="button" class="secondary detail-tab" data-tab-target="history">
+                  Geçmiş
+                </button>
+                <button id="status-history-tab" type="button" class="secondary detail-tab" data-tab-target="statusHistory">
+                  Durum Geçmişi
+                </button>
+              </div>
+            </section>
+
+            <section class="card detail-section" id="section-details">
+              <div class="table-wrap">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>ID</th>
+                      <td id="detail-id">-</td>
+                    </tr>
+                    <tr>
+                      <th>Açan Kişi</th>
+                      <td id="detail-owner">-</td>
+                    </tr>
+                    <tr>
+                      <th>Blok</th>
+                      <td id="detail-blok">-</td>
+                    </tr>
+                    <tr>
+                      <th>Kategori</th>
+                      <td id="detail-kategori">-</td>
+                    </tr>
+                    <tr>
+                      <th>Alt Kategori</th>
+                      <td id="detail-alt-kategori">-</td>
+                    </tr>
+                    <tr>
+                      <th>Aciliyet</th>
+                      <td id="detail-aciliyet">-</td>
+                    </tr>
+                    <tr>
+                      <th>Durum</th>
+                      <td id="detail-durum">-</td>
+                    </tr>
+                    <tr>
+                      <th>Açıklama</th>
+                      <td id="detail-aciklama">-</td>
+                    </tr>
+                    <tr>
+                      <th>Tarih</th>
+                      <td id="detail-tarih">-</td>
+                    </tr>
+                    <tr id="detail-resolution-row">
+                      <th id="detail-resolution-label">Geçen Süre</th>
+                      <td id="detail-resolution-time">-</td>
+                    </tr>
+                    <tr>
+                      <th>Ek Dosya</th>
+                      <td id="detail-attachment">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="card detail-section" id="section-comments" hidden>
+              <h2>Yorumlar</h2>
+              <form id="comment-form">
+                <label>
+                  <span>Yorum</span> <span class="required">*</span>
+                  <textarea
+                    id="comment-input"
+                    name="comment"
+                    maxlength="1000"
+                    required
+                  ></textarea>
+                </label>
+                <small class="field-error" data-error-for="comment"></small>
+                <button id="comment-submit-btn" type="submit">Yorum Ekle</button>
+              </form>
+              <div id="comments-empty" class="small" hidden>Henüz yorum yok.</div>
+              <div id="comments-list" class="comments-list"></div>
+            </section>
+
+            <section class="card detail-section" id="section-history" hidden>
+              <h2>Geçmiş</h2>
+              <div id="history-empty" class="small" hidden>Henüz geçmiş kaydı yok.</div>
+              <div id="history-list" class="history-timeline"></div>
+            </section>
+
+            <section class="card detail-section" id="section-status-history" hidden>
+              <h2>Durum Geçmişi</h2>
+              <div id="status-history-empty" class="small" hidden>Henüz durum geçmişi yok.</div>
+              <div id="status-history-list" class="status-history-list"></div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/request-detail.js"></script>
+  </body>
+</html>
+
+
+

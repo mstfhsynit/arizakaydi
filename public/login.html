@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="login.pageTitle">Giriş Yap</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="login-page page-login">
+    <section class="login-side">
+      <div class="login-side-inner">
+        <h1 class="login-hero-title" data-i18n="login.heroTitle">
+          Kahramanmaraş Mesleki ve Teknik Anadolu Lisesi
+        </h1>
+        <p class="login-hero-description" data-i18n="login.heroDescription">
+          Eğitimde düzen, teknolojide güç.
+          Arıza ve bakım süreçlerini güvenli, hızlı ve sistematik şekilde yönetin.
+        </p>
+      </div>
+    </section>
+
+    <section class="login-main">
+      <div class="login-card fade-in">
+        <h2 data-i18n="login.title">Giriş Yap</h2>
+        <div id="message" class="message"></div>
+        <form id="login-form">
+          <label>
+            <span data-i18n="login.username">Kullanıcı Adı</span> <span class="required">*</span>
+            <input type="text" name="username" required />
+          </label>
+          <small class="field-error" data-error-for="username"></small>
+          <label>
+            <span data-i18n="login.password">Şifre</span> <span class="required">*</span>
+            <input type="password" name="password" required />
+          </label>
+          <small class="field-error" data-error-for="password"></small>
+          <button type="submit" id="login-submit-btn" data-i18n="login.button">Giriş Yap</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="request.createPageTitle">Kayıt Oluştur</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="page-app">
+    <div class="app-shell fade-in">
+      <aside id="sidebar" class="sidebar"></aside>
+      <div class="app-main">
+        <header id="topbar" class="topbar"></header>
+        <main class="content-area">
+          <div class="container">
+            <section class="card form-card">
+              <h1 data-i18n="request.createTitle">Arıza / Tadilat Kaydı Oluştur</h1>
+              <p class="lead-text" data-i18n="request.ruleDescription">
+                Kural: Aciliyet = Acil veya Alt Kategori = Diğer seçiminde açıklama zorunludur.
+              </p>
+              <div id="message" class="message"></div>
+
+              <form id="request-form">
+                <label>
+                  <span data-i18n="request.fullName">Ad Soyad</span> <span class="required">*</span>
+                  <input type="text" name="adSoyad" required />
+                </label>
+                <small class="field-error" data-error-for="adSoyad"></small>
+
+                <div class="row">
+                  <div>
+                    <label>
+                      <span data-i18n="request.block">Blok</span> <span class="required">*</span>
+                      <select name="blok" id="blok-select" required></select>
+                    </label>
+                    <small class="field-error" data-error-for="blok"></small>
+                  </div>
+                  <div>
+                    <label>
+                      <span data-i18n="request.category">Kategori</span>
+                      <span class="required">*</span>
+                      <select name="kategori" id="kategori-select" required></select>
+                    </label>
+                    <small class="field-error" data-error-for="kategori"></small>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div>
+                    <label>
+                      <span data-i18n="request.subCategory">Alt Kategori</span>
+                      <span class="required">*</span>
+                      <select name="alt_kategori" id="alt-kategori-select" required></select>
+                    </label>
+                    <small class="field-error" data-error-for="alt_kategori"></small>
+                  </div>
+                  <div>
+                    <label>
+                      <span data-i18n="request.urgency">Aciliyet</span>
+                      <span class="required">*</span>
+                      <select name="aciliyet" id="aciliyet-select" required></select>
+                    </label>
+                    <small class="field-error" data-error-for="aciliyet"></small>
+                  </div>
+                </div>
+
+                <label>
+                  <span data-i18n="request.description">Açıklama</span>
+                  <textarea name="aciklama" id="aciklama"></textarea>
+                </label>
+                <small class="field-error" data-error-for="aciklama"></small>
+
+                <label>
+                  <span>Ek Dosya (.jpg, .png, .pdf)</span>
+                  <input
+                    type="file"
+                    name="attachment"
+                    id="attachment-input"
+                    accept=".jpg,.png,.pdf"
+                  />
+                </label>
+                <small class="field-error" data-error-for="attachment"></small>
+
+                <button type="submit" id="request-submit-btn" data-i18n="request.save">
+                  Kaydı Kaydet
+                </button>
+              </form>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/create-request.js"></script>
+  </body>
+</html>
